@@ -1,0 +1,359 @@
+/********** Template CSS **********/
+:root {
+    --primary: #06A3DA;
+    --secondary: #F57E57;
+    --light: #EEF9FF;
+    --dark: #091E3E;
+}
+
+/* ========================================= */
+/* TYPOGRAPHY & BASE STYLES                  */
+/* ========================================= */
+h1, h2, .font-weight-bold { font-weight: 700 !important; }
+h3, h4, .font-weight-semi-bold { font-weight: 600 !important; }
+h5, h6, .font-weight-medium { font-weight: 500 !important; }
+
+/* ========================================= */
+/* BUTTONS                                   */
+/* ========================================= */
+.btn {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-primary, .btn-secondary { color: #FFFFFF; }
+.btn-primary:hover { background: var(--secondary); border-color: var(--secondary); }
+.btn-secondary:hover { background: var(--primary); border-color: var(--primary); }
+
+.btn-square { width: 36px; height: 36px; }
+.btn-sm-square { width: 28px; height: 28px; }
+.btn-lg-square { width: 46px; height: 46px; }
+
+.btn-square, .btn-sm-square, .btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+/* ========================================= */
+/* SPINNER & BACK TO TOP                     */
+/* ========================================= */
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+/* ========================================= */
+/* NAVBAR & TOPBAR                           */
+/* ========================================= */
+.top-shape::before {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 100%;
+    top: 0;
+    left: -17px;
+    background: var(--primary);
+    transform: skew(40deg);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Jost', sans-serif;
+    padding: 35px 15px;
+    font-size: 18px;
+    color: var(--dark);
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top.navbar-light .navbar-nav .nav-link { padding: 20px 15px; }
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active { color: var(--primary); }
+
+/* ========================================= */
+/* CAROUSEL & HERO                           */
+/* ========================================= */
+.carousel-caption {
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(9, 30, 62, .85);
+    z-index: 1;
+}
+
+.carousel-control-prev, .carousel-control-next { width: 10%; }
+.carousel-control-prev-icon, .carousel-control-next-icon { width: 3rem; height: 3rem; }
+
+.hero-header {
+    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(../img/carousel-1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+/* ========================================= */
+/* SECTION TITLES                            */
+/* ========================================= */
+.section-title h5::before {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 3px;
+    right: -55px;
+    bottom: 11px;
+    background: var(--primary);
+}
+
+.section-title h5::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 3px;
+    right: -75px;
+    bottom: 11px;
+    background: var(--secondary);
+}
+
+/* ========================================= */
+/* SERVICES & TEAM ITEMS                     */
+/* ========================================= */
+.service-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.service-item img,
+.service-item .bg-light,
+.service-item .bg-light h5,
+.team-item .team-text { transition: .5s; }
+
+.service-item .rounded-top { overflow: hidden; }
+.service-item:hover img { transform: scale(1.15); }
+
+.team-item .team-text::after,
+.service-item .bg-light::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    border-radius: 100px / 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .7);
+    opacity: 0;
+    transition: .5s;
+    z-index: -1;
+}
+
+.team-item:hover .team-text::after,
+.service-item:hover .bg-light::after { opacity: 1; }
+
+
+/* ========================================= */
+/* RESPONSIVE MEDIA QUERIES (MOBILE/TABLET)  */
+/* ========================================= */
+
+/* Tablets (Max Width 991px) */
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link,
+    .sticky-top.navbar-light .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+    
+    /* Team Section Tablet Fix */
+    .team-section {
+        margin-top: 0 !important;
+    }
+}
+
+/* Mobile Devices (Max Width 767px) */
+@media (max-width: 767.98px) {
+    
+    /* 1. Global Safety: Prevent ANY horizontal scrolling or cut-off */
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+
+    /* 2. Navbar Fixes */
+    .navbar-brand { max-width: 75vw !important; }
+    .navbar-brand h1 {
+        font-size: 1rem !important;
+        line-height: 1.2 !important;
+        white-space: normal !important;
+    }
+    .navbar-brand img {
+        height: 35px !important;
+        margin-right: 8px !important;
+    }
+
+    /* 3. Carousel & Hero Fixes */
+    .carousel-caption h5 {
+        font-size: 0.85rem !important;
+        line-height: 1.3 !important;
+    }
+    .hero-display-text, 
+    .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+        font-size: 1.5rem !important; 
+        line-height: 1.3 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    .carousel-item img {
+        height: 50vh !important;
+        min-height: 350px !important;
+        object-fit: cover !important;
+    }
+
+    /* 4. Booking Section Fixes */
+    .booking-section {
+        margin-top: 0 !important;
+        padding-top: 2rem !important;
+    }
+    .booking-section .rounded { border-radius: 0.5rem !important; }
+
+    /* 5. Pricing Section Fixes */
+    .pricing-text-col {
+        margin-top: 0 !important; 
+        margin-bottom: 2rem !important;
+        text-align: center !important;
+    }
+    #pricingCarousel .carousel-control-prev { left: 0 !important; }
+    #pricingCarousel .carousel-control-next { right: 0 !important; }
+
+    /* 6. Team Section Fixes (Stacked Vertical Layout) */
+    .team-section {
+        margin-top: 0 !important;
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    /* Right Side Content Container */
+    .team-section .col-lg-7 > .bg-light {
+        padding: 2rem 1.25rem !important;
+        text-align: center !important;
+    }
+
+    /* Header Text */
+    .team-section .col-lg-7 .mb-4 h1.display-5 {
+        font-size: 1.75rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 0.75rem !important;
+    }
+    .team-section .col-lg-7 .mb-4 p {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Stats Row - Make each box full width on mobile */
+    .team-section .col-lg-7 .row.g-3.mb-4 .col-4 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        padding: 0.5rem !important;
+    }
+    .team-section .col-lg-7 .row.g-3.mb-4 .bg-white {
+        padding: 1.25rem 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        text-align: left !important;
+    }
+    .team-section .col-lg-7 .row.g-3.mb-4 .bg-white .team-stats-number {
+        font-size: 1.75rem !important;
+        margin: 0 !important;
+        flex: 0 0 auto !important;
+    }
+    .team-section .col-lg-7 .row.g-3.mb-4 .bg-white .small {
+        font-size: 0.9rem !important;
+        margin: 0 !important;
+        flex: 1 !important;
+        text-align: right !important;
+    }
+
+    /* Credentials List */
+    .team-section .col-lg-7 .row.g-2.mb-4 .col-md-6 {
+        margin-bottom: 0.5rem !important;
+    }
+    .team-section .col-lg-7 .row.g-2.mb-4 .d-flex {
+        justify-content: center !important;
+    }
+
+    /* CTA Button */
+    .team-section .col-lg-7 .text-center.mt-2 .btn-primary {
+        width: 100% !important; 
+        max-width: 280px !important;
+        padding: 0.75rem 1rem !important;
+        font-size: 1rem !important;
+    }
+
+    /* Doctor Image */
+    .team-doctor-img {
+        height: auto !important;
+        max-height: 350px !important;
+        width: 100% !important;
+    }
+    .team-section .position-absolute.rounded-circle {
+        right: 10px !important;
+        bottom: 10px !important;
+        width: 70px !important;
+        height: 70px !important;
+    }
+
+    /* 7. About & Service Sections Fixes */
+    .about-img-col, .service-img-col {
+        min-height: 250px !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .section-title h1, 
+    .section-title .display-4, 
+    .section-title .display-5 {
+        font-size: 1.6rem !important;
+        line-height: 1.3 !important;
+    }
+
+    /* 8. Contact & Forms Fixes */
+    .bg-light.rounded iframe { height: 200px !important; }
+    input, select, textarea { font-size: 16px !important; }
+
+    /* 9. Footer Fixes */
+    .container-fluid.bg-dark.text-light .col-md-6 {
+        text-align: center !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .container-fluid.bg-dark.text-light .d-flex.flex-column { align-items: center !important; }
+    .container-fluid.bg-dark.text-light .d-flex.align-items-start {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .container-fluid.bg-dark.text-light .d-flex.align-items-start i {
+        margin-bottom: 0.5rem !important;
+        margin-right: 0 !important;
+    }
+
+    /* 10. Back to Top Button Fixes */
+    .back-to-top {
+        right: 15px !important;
+        bottom: 15px !important;
+        width: 40px !important;
+        height: 40px !important;
+        line-height: 40px !important;
+        font-size: 1rem !important;
+    }
+}
