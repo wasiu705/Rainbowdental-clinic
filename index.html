@@ -45,21 +45,32 @@
     </div>
     <!-- Spinner End -->
 
-    <!-- Topbar Start (Hidden on mobile by default, which is best practice) -->
-    <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
-        <div class="row gx-0">
-            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+        <!-- Topbar Start (Hidden on mobile by default, which is best practice) -->
+    <div class="container-fluid bg-light ps-3 ps-lg-5 pe-0 d-none d-lg-block">
+        <div class="row gx-0 align-items-center">
+            <!-- Opening Hours -->
+            <div class="col-lg-6 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center">
-                    <small class="py-2"><i class="far fa-clock text-primary me-2"></i>Opening Hours: Mon - Sat : 8.00 am - 5.00 pm, Sunday Closed </small>
+                    <small class="py-2">
+                        <i class="far fa-clock text-primary me-2"></i>Opening Hours: Mon - Sat : 8.00 am - 5.00 pm, Sunday Closed
+                    </small>
                 </div>
             </div>
-            <div class="col-md-6 text-center text-lg-end">
-                <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape ps-6 pe-4">
-                    <div class="me-3 pe-3 border-end py-2">
-                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>rainbowdencialclinic34@gmail.com</p>
+            
+            <!-- Email & Phone -->
+            <div class="col-lg-6 text-center text-lg-end">
+                <div class="position-relative d-inline-flex flex-wrap align-items-center justify-content-center justify-content-lg-end bg-primary text-white top-shape px-3 py-2">
+                    <div class="me-3 pe-3 border-end border-white-50 py-1">
+                        <!-- text-break ensures the long email wraps cleanly without overflowing -->
+                        <p class="m-0 small text-break">
+                            <i class="fa fa-envelope-open me-2"></i>rainbowdencialclinic34@gmail.com
+                        </p>
                     </div>
-                    <div class="py-2">
-                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+2347035247105 / +2347035068966</p>
+                    <div class="py-1 ps-2">
+                        <!-- text-nowrap keeps the phone numbers on a single, clean line -->
+                        <p class="m-0 small text-nowrap">
+                            <i class="fa fa-phone-alt me-2"></i>+234 703 524 7105 / +234 703 506 8966
+                        </p>
                     </div>
                 </div>
             </div>
