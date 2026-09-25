@@ -101,7 +101,7 @@ h5, h6, .font-weight-medium { font-weight: 500 !important; }
 .carousel-control-prev-icon, .carousel-control-next-icon { width: 3rem; height: 3rem; }
 
 .hero-header {
-    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(../img/services_101.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -220,18 +220,31 @@ h5, h6, .font-weight-medium { font-weight: 500 !important; }
         object-fit: cover !important;
     }
 
-    /* 4. Booking Section Fixes */
+       /* 4. Booking Section Fixes - Move Opening Hours UP */
     .booking-section {
         margin-top: 0 !important;
-        padding-top: 2rem !important;
+        padding-top: 0.5rem !important; /* was 2rem */
     }
     .booking-section .rounded { border-radius: 0.5rem !important; }
+    /* Opening Hours inside Booking */
+    .booking-section .col-lg-6:last-child,
+    .booking-section .bg-light,
+    .booking-section .opening-hours,
+    .booking-section .border {
+        margin-top: -15px !important;
+        padding-top: 0.5rem !important;
+    }
 
-    /* 5. Pricing Section Fixes */
+        /* 5. Pricing Section Fixes */
     .pricing-text-col {
         margin-top: 0 !important; 
-        margin-bottom: 2rem !important;
+        margin-bottom: 1rem !important;
         text-align: center !important;
+    }
+    .pricing-section-wrapper,
+    .container-fluid:has(.pricing-text-col) {
+        margin-top: 50px !important;
+        padding-top: 1rem !important;
     }
     #pricingCarousel .carousel-control-prev { left: 0 !important; }
     #pricingCarousel .carousel-control-next { right: 0 !important; }
@@ -239,7 +252,7 @@ h5, h6, .font-weight-medium { font-weight: 500 !important; }
     /* 6. Team Section Fixes (Stacked Vertical Layout) */
     .team-section {
         margin-top: 0 !important;
-        padding-top: 2rem !important;
+        padding-top: 0rem !important;
         padding-bottom: 2rem !important;
     }
 
@@ -291,7 +304,7 @@ h5, h6, .font-weight-medium { font-weight: 500 !important; }
         margin-bottom: 0.5rem !important;
     }
     .team-section .col-lg-7 .row.g-2.mb-4 .d-flex {
-        justify-content: center !important;
+        justify-content: flex-start !important;
     }
 
     /* CTA Button */
@@ -302,11 +315,21 @@ h5, h6, .font-weight-medium { font-weight: 500 !important; }
         font-size: 1rem !important;
     }
 
-    /* Doctor Image */
-    .team-doctor-img {
-        height: auto !important;
-        max-height: 350px !important;
+       /* Doctor Image - FULL WIDTH EQUAL TO OTHERS */
+    .team-section .position-relative.h-100.p-4 {
+        padding: 0 !important;
         width: 100% !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .team-section .position-relative.h-100 .position-relative[style*="z-index: 2"] {
+        width: 100% !important;
+    }
+    .team-doctor-img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 400px !important;
+        object-fit: cover !important;
+        border-radius: 1rem !important;
     }
     .team-section .position-absolute.rounded-circle {
         right: 10px !important;
@@ -318,8 +341,15 @@ h5, h6, .font-weight-medium { font-weight: 500 !important; }
     /* 7. About & Service Sections Fixes */
     .about-img-col, .service-img-col {
         min-height: 250px !important;
-        margin-bottom: 1.5rem !important;
+        margin-bottom: 0.rem !important;
     }
+    /* Move About UP */
+    .container-fluid.py-5:has(.about-img-col) {
+        margin-top: -30px !important;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+    
     .section-title h1, 
     .section-title .display-4, 
     .section-title .display-5 {
@@ -331,20 +361,25 @@ h5, h6, .font-weight-medium { font-weight: 500 !important; }
     .bg-light.rounded iframe { height: 200px !important; }
     input, select, textarea { font-size: 16px !important; }
 
-    /* 9. Footer Fixes */
+        /* 9. Footer Fixes - LEFT ALIGN */
     .container-fluid.bg-dark.text-light .col-md-6 {
-        text-align: center !important;
+        text-align: left !important;
         margin-bottom: 1.5rem !important;
     }
-    .container-fluid.bg-dark.text-light .d-flex.flex-column { align-items: center !important; }
+    .container-fluid.bg-dark.text-light .d-flex.flex-column { 
+        align-items: flex-start !important; 
+    }
     .container-fluid.bg-dark.text-light .d-flex.align-items-start {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        text-align: left !important;
     }
     .container-fluid.bg-dark.text-light .d-flex.align-items-start i {
-        margin-bottom: 0.5rem !important;
-        margin-right: 0 !important;
+        margin-right: 12px !important;
+        margin-bottom: 0 !important;
+    }
+    .container-fluid.bg-dark.text-light .d-flex {
+        justify-content: flex-start !important;
     }
 
     /* 10. Back to Top Button Fixes */
