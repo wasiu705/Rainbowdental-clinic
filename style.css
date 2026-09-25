@@ -338,30 +338,23 @@ h5, h6, .font-weight-medium { font-weight: 500 !important; }
         height: 70px !important;
     }
 
-    /* 7. About & Service Sections Fixes */
+     /* 7. About & Service Sections Fixes */
     .about-img-col, .service-img-col {
         min-height: 250px !important;
-        margin-bottom: 0.rem !important;
+        margin-bottom: 1.5rem !important;
     }
-    /* Move About UP */
-    .container-fluid.py-5:has(.about-img-col) {
-        margin-top: -30px !important;
-        padding-top: 0.5rem !important;
-        padding-bottom: 0.5rem !important;
-    }
-    
     .section-title h1, 
     .section-title .display-4, 
     .section-title .display-5 {
         font-size: 1.6rem !important;
         line-height: 1.3 !important;
     }
-
     /* 8. Contact & Forms Fixes */
     .bg-light.rounded iframe { height: 200px !important; }
     input, select, textarea { font-size: 16px !important; }
+   
 
-        /* 9. Footer Fixes - LEFT ALIGN */
+    /* 9. Footer Fixes - LEFT ALIGN */
     .container-fluid.bg-dark.text-light .col-md-6 {
         text-align: left !important;
         margin-bottom: 1.5rem !important;
