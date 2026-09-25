@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Our Dentist - Rainbow Dental Clinic</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <title>Rainbow Dental Clinic</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport">
+    <meta content="Dental Clinic, Dentist, Benin City, Rainbow Dental Clinic" name="keywords">
+    <meta content="Professional and compassionate dental care in Benin City. Book your appointment today." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.png" rel="icon" type="image/png">
@@ -28,7 +28,6 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    
 </head>
 
 <body>
@@ -46,21 +45,32 @@
     </div>
     <!-- Spinner End -->
 
-    <!-- Topbar Start (Hidden on mobile by default, which is best practice) -->
-    <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
-        <div class="row gx-0">
-            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+        <!-- Topbar Start (Hidden on mobile by default, which is best practice) -->
+    <div class="container-fluid bg-light ps-3 ps-lg-5 pe-0 d-none d-lg-block">
+        <div class="row gx-0 align-items-center">
+            <!-- Opening Hours -->
+            <div class="col-lg-6 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center">
-                    <small class="py-2"><i class="far fa-clock text-primary me-2"></i>Opening Hours: Mon - Sat : 8.00 am - 5.00 pm, Sunday Closed </small>
+                    <small class="py-2">
+                        <i class="far fa-clock text-primary me-2"></i>Opening Hours: Mon - Sat : 8.00 am - 5.00 pm, Sunday Closed
+                    </small>
                 </div>
             </div>
-            <div class="col-md-6 text-center text-lg-end">
-                <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape ps-6 pe-4">
-                    <div class="me-3 pe-3 border-end py-2">
-                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>rainbowdencialclinic34@gmail.com</p>
+            
+            <!-- Email & Phone -->
+            <div class="col-lg-6 text-center text-lg-end">
+                <div class="position-relative d-inline-flex flex-wrap align-items-center justify-content-center justify-content-lg-end bg-primary text-white top-shape px-3 py-2">
+                    <div class="me-3 pe-3 border-end border-white-50 py-1">
+                        <!-- text-break ensures the long email wraps cleanly without overflowing -->
+                        <p class="m-0 small text-break">
+                            <i class="fa fa-envelope-open me-2"></i>rainbowdencialclinic34@gmail.com
+                        </p>
                     </div>
-                    <div class="py-2">
-                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+2347035247105 / +2347035068966</p>
+                    <div class="py-1 ps-2">
+                        <!-- text-nowrap keeps the phone numbers on a single, clean line -->
+                        <p class="m-0 small text-nowrap">
+                            <i class="fa fa-phone-alt me-2"></i>+234 703 524 7105 / +234 703 506 8966
+                        </p>
                     </div>
                 </div>
             </div>
@@ -69,18 +79,17 @@
     <!-- Topbar End -->
 
     <!-- Navbar Start -->
-    <!-- Changed px-5 to px-3 px-lg-5 for better mobile padding -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-3 px-lg-5 py-3 py-lg-0">
         <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
             <img src="img/logo.png.png" alt="Rainbow Logo" style="height: 45px; width: auto; margin-right: 12px;">
-            <h1 class="m-0 text-primary" style="font-size: 1.25rem;">Rainbow Dental Clinic</h1>
+            <!-- <h1 class="m-0 text-primary" style="font-size: 1.25rem;">Rainbow Dental Clinic</h1> -->
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="index.html" class="nav-item nav-link ">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="service.html" class="nav-item nav-link">Service</a>
                 <a href="team.html" class="nav-item nav-link active">Dentist</a>
