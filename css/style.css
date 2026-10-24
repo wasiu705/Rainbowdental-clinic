@@ -341,7 +341,7 @@ h5, h6, .font-weight-medium { font-weight: 500 !important; }
      /* 7. About & Service Sections Fixes */
     .about-img-col, .service-img-col {
         min-height: 250px !important;
-        margin-bottom: 1.5rem !important;
+        margin-bottom: 1rem !important;
     }
     .section-title h1, 
     .section-title .display-4, 
@@ -384,4 +384,6 @@ h5, h6, .font-weight-medium { font-weight: 500 !important; }
         line-height: 40px !important;
         font-size: 1rem !important;
     }
+
+   
 }
